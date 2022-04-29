@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+:root {
+  --primary: rgb(248, 196, 7);
+  --secondary: rgb(83, 83, 83);
+  --dark: rgb(0, 0, 0);
+  --light: white;
+}
+body {
+  background-color: var(--light);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgb(43, 42, 42);
+  overflow: hidden;
+  border-radius: 16px;
+
+  box-shadow: 0px 2px 20px rgb(0, 0, 0.2);
+
+  .display {
+    padding: 16px;
+    text-align: right;
+
+    color: var(--light);
+    font-size: 24px;
+    font-weight: 400;
+
+    span {
+      font-size: 14px;
+      color: rgb(138, 135, 135);
+    }
+  }
+
+  .digits {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+      flex: 1 1 33.333%;
+      max-width: 33.333%;
+
+      font-weight: 700;
+      font-size: 20px;
+      border: 1px solid var(--dark);
+      background: var(--secondary);
+      border-radius: 0;
+      color: var(--light);
+
+      &:hover {
+          background-color: var(--dark);
+      }
+    }
+  }
+
+  .operators {
+    display: flex;
+
+    button {
+      font-size: 18px;
+      transition: all 0.5s;
+      position: relative;
+      font-weight: 700;
+      border-radius: 0;
+      color: var(--light);
+      transition: 0.4s;
+      border: 1px solid var(--dark);
+      background-color: var(--primary);
+      flex: 1 1 0;
+
+      &:hover {
+        box-shadow: inset 0 0 0 1px #060606;
+      }
+    }
+  }
+}
